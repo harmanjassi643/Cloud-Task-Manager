@@ -7,8 +7,16 @@ from sqlalchemy.orm import sessionmaker
 # import declarative_base to create models
 from sqlalchemy.orm import declarative_base
 
+# as per day 2
+import os
+from dotenv import load_dotenv
+load_dotenv()
+# import the function that can read a .env , i.e open the .env and load all of its variables 
+# into the memory 
+
+
 # database connection string
-DATABASE_URL= "postgresql://neondb_owner:npg_nib90ajXMIBo@ep-wild-term-ao8nlm0e-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+DATABASE_URL= os.getenv("DATABASE_URL")
 # we are connectiong to a postgresql for connectiong fastapi
 
 # click the show password and copy the complete connection string 

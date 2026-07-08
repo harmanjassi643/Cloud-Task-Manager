@@ -1,0 +1,5 @@
+.env
+# ignore htis file 
+
+venv/
+# ignore the virtual environment folder if exists
